@@ -8,6 +8,7 @@ public class PrimeNumberFinder {
     finder.printPrimeNumbers2(20);
   }
 
+  // First attempt
   public void printPrimeNumbers(final int limit) {
   
     List<Integer> allNumbers = new CopyOnWriteArrayList<>();
@@ -32,6 +33,7 @@ public class PrimeNumberFinder {
     System.out.println(allNumbers);
   }
 
+  // Second attempt (but this visits the updated indexes again)
   public void printPrimeNumbers1(final int limit) {
     byte[] allNumbers = new byte[limit];
     for (int number = 2; number <= limit; number++) {
@@ -51,6 +53,7 @@ public class PrimeNumberFinder {
     }
   }
 
+  // Third attempt - enhancement of the sencond
   public void printPrimeNumbers2(final int limit) {
     byte[] allNumbers = new byte[limit + 1]; // +1 is just to avoid the array index out of bound
 
